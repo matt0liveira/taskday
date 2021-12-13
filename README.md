@@ -1,2 +1,15 @@
 # taskday
-Aplicação Web de marcador de tarefas feito com html5/css/js (front-end) e php/sql (back-end)
+
+## Tecnologias usadas
+
+### Front-end
+
+Para desenvolver a parte visual desta aplicação web foi usado html5, css3 e javascript
+
+### Back-end
+
+Para desenvolver a parte funcional desta aplicação web foi usado php
+
+### Base de dados
+
+Para a base de dados foi usado MySql
