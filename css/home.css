@@ -1,0 +1,481 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color:#ddd;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #0078d4;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 50%;
+    height: 70px;
+    padding: 23px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 18px;
+}
+
+.logo h2{
+    color: #fff;
+    font-size: 25px;
+}
+
+.logout{
+    width: 50%;
+    height: 70px;
+    padding: 23px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logout a{
+    width: 100px;
+    padding: 5px;
+    background: transparent;
+    border: 1px solid rgb(247, 68, 68);
+    border-radius: 5px;
+    color: rgb(247, 68, 68);
+    font-size: 20px;
+    text-align: center;
+}
+
+.logout a:hover{
+    color: #fff;
+    background-color: rgb(247, 68, 68);
+    transition: all 0.2s ease-in-out;
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section-cadastro{
+    width: 100%;
+    position: fixed;
+    bottom: 15%;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section-cadastro button{
+    width: 60px;
+    height: 60px;
+    margin-right: 100px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: #0078d4;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-modal{
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+
+.form-modal.invisible{
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.cabecalho{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(116, 114, 114);
+    position: relative;
+}
+
+.btn-fechar{
+    position: absolute;
+    top: -10%;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: rgb(247, 68, 68);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cabecalho h1{
+    margin-left: 15px;
+}
+
+.form-group{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    margin-left: 25px;
+}
+
+.input-desc{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    margin-left: 25px;
+}
+
+.form-button{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 20px; 
+}
+
+.form-button input[type="submit"] {
+    padding: 14px 45px;
+    background: #0078d4;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0px 2px 4px -0.7px rgb(0 0 0 / 25%);
+    cursor: pointer;
+}
+
+.box-modal{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    backdrop-filter: blur(15px);    
+    opacity: 1;
+    transition: opacity .2s;
+    z-index: 500;
+}
+
+.box-modal.invisible{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.box-tarefa{
+    width: 100vw;
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.box-tarefa h3{
+    font-size: 2em;
+    padding: 10px;
+    margin-top: 30px;
+    color: #444;
+}
+
+.box-tarefa .tarefa{
+    width: 95%;
+    height: 15vh;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.tarefa .title-tarefa{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #444;
+}
+
+.btn-abrirM{
+    padding: 14px 45px;
+    background: #0078d4;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0px 2px 4px -0.7px rgb(0 0 0 / 25%);
+    cursor: pointer;
+}
+
+.btn-abrirM:hover{
+    background-color: #085d9e;
+    transition: all 0.5s linear;
+}
+
+.back-overlay{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    overflow-y: hidden;
+    left: 0;    
+    backdrop-filter: blur(15px);    
+    opacity: 1;
+    transition: opacity .2s;
+    z-index: 500;
+}
+
+.back-overlay.invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-tarefa{
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+    transition: all 0.5s ease;
+    z-index: 999;
+}
+
+.modal-tarefa.invisible{
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -110%);
+}
+
+.input-group{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-group button, a{
+    width: 60px;
+    padding: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.btnFechar{
+    position: absolute;
+    top: -10%;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: rgb(247, 68, 68);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-concluir{
+    border: 1px solid rgb(6, 207, 6);
+    background: rgb(6, 207, 6);
+    color: #fff;
+}
+
+.btn-concluir:hover{
+    background: rgb(5, 151, 5);
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-editar{
+    border: 1px solid #ffc107;
+    color: #fff;
+    background: #ffc107;
+}
+
+.btn-editar:hover{
+    background: #c59505;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-excluir{
+    background-color: rgb(247, 68, 68);
+    border: 1px solid rgb(247, 68, 68);
+    color: #fff;
+}
+ .btn-excluir:hover{
+    color: #fff;
+    background-color: rgb(197, 27, 27);
+    transition: all 0.5s ease-in-out;
+ }
+
+.caixa-confirmacao{
+    width: 400px;
+    height: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ddd;
+    border-radius: 3px;
+    border: 1px solid #555;
+    transition: all 0.5s ease;
+}
+
+.caixa-confirmacao.invisible{
+    top: -100%;
+    left: 50%;
+}
+
+.caixa-confirmacao .header{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(236, 53, 53);
+    
+}
+
+.caixa-confirmacao .header>h4{
+    color: #fff;
+    margin-left: 10px;
+}
+
+.caixa-confirmacao p{
+    color: #000;
+    padding: 20px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.caixa-confirmacao .btns-confirm{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btns-confirm a{
+    text-decoration: none;
+    width: 90px;
+    padding: 10px;
+    color: #fff;
+}
+
+#btnApagar{       
+    background-color: rgb(247, 68, 68); 
+}
+
+#btnApagar:hover{    
+    background-color: rgb(141, 38, 38);
+    transition: all 0.5s ease-in-out;
+}
+
+#btnCancel{
+    background-color: rgb(24, 192, 24);
+}
+
+#btnCancel:hover{
+    background-color: rgb(8, 116, 8);
+    transition: all 0.5s ease-in-out;
+}
+
+.box-input{
+    width: 100%;
+    position: relative;
+}
+
+.form-group input{
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.2em;
+    z-index: 0;
+}
+
+.input-desc input{
+    width: 90%;
+    height: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+    text-align: start;
+    z-index: 0;
+}
+
+.box-input button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group .box-input button{
+    position: absolute;
+    right: 13%;
+}
+
+.input-desc .box-input button{
+    position: absolute;
+    top: 30%;
+    right: 13%;
+}
+
+.box-input .btn-block{
+    color: #555;
+    padding: 10px;
+    font-size: 20px;
+}
