@@ -1,5 +1,9 @@
 # taskday
 
+## O que é o taskday?
+
+O taskday é uma aplicação web que serve para organizar suas tarefas do cotidiano!
+
 ## Tecnologias usadas
 
 ### Front-end
